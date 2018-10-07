@@ -21,7 +21,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var menu: Bool = true
     let pathToBattleWav = Bundle.main.path(forResource: "battle.wav", ofType: nil)!
     let pathToBlopWav = Bundle.main.path(forResource: "blop.wav", ofType: nil)!
-    let ship = SKSpriteNode(imageNamed: "ship")
+    let ship = SKSpriteNode(imageNamed: "newship")
     let monkey = SKSpriteNode(imageNamed: "monkeyblow")
     var score = SKLabelNode(text: "0")
     var numScore = 0
@@ -68,7 +68,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         ship.zPosition = 1
         addChild(ship)
         
-        //Setup Ted
+        //Setup Captain Ted
         monkey.name = "monkey"
         monkey.physicsBody = SKPhysicsBody(circleOfRadius: CGFloat(20))
         monkey.physicsBody?.isDynamic = false
@@ -172,8 +172,29 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             numOfBalloons -= 1
             numScore -= 1
         }
-        checkBallons()
-        score.text = String(numScore)
+        if numScore < -10 {
+            reset()
+        } else {
+            checkBallons()
+            score.text = String(numScore)
+        }
+    }
+    
+    func reset() {
+        numScore = 0
+        numOfBalloons = 0
+        for ent in self.children {
+            if ent.name == "balloon" || ent.name == "nail" {
+                ent.removeFromParent()
+            }
+        }
+        menu = true
+        menuLabel1.text = "You Ded."
+        menuLabel1.run(SKAction.fadeIn(withDuration: 0.5))
+        addChild(menuLabel1)
+        menuLabel2.text = "Tap to restart invation"
+        menuLabel2.run(SKAction.fadeIn(withDuration: 0.5))
+        addChild(menuLabel2)
     }
     
     func didEnd(_ contact: SKPhysicsContact) {

@@ -24,7 +24,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let ship = SKSpriteNode(imageNamed: "newship")
     let monkey = SKSpriteNode(imageNamed: "monkeyblow")
     var score = SKLabelNode(text: "0")
+    var health = SKLabelNode(text: "10")
     var numScore = 0
+    var numHealth = 10
     var numOfBalloons = 0
     var blopSound: SKAudioNode? 
     
@@ -85,6 +87,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         score.position = CGPoint(x: view.frame.width / 2, y: view.frame.height - (view.frame.height / 8))
         score.fontSize = CGFloat(50)
         addChild(score)
+        
+        //Setup health counter
+        health.zPosition = 5
+        health.position = CGPoint(x: view.frame.width / 4, y: view.frame.height - (view.frame.height / 8))
+        health.fontSize = CGFloat(50)
+        addChild(health)
     }
     
     
@@ -154,7 +162,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if contact.bodyA.node!.name! == "monkey" && contact.bodyB.node!.name! == "balloon" {
             contact.bodyB.node!.removeFromParent()
             numOfBalloons -= 1
-            numScore -= 1
+            numHealth -= 1
         } else if contact.bodyA.node!.name! == "nail" && contact.bodyB.node!.name! == "ballon" {
             contact.bodyB.node!.removeFromParent()
             contact.bodyA.node!.removeFromParent()
@@ -172,11 +180,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             numOfBalloons -= 1
             numScore -= 1
         }
-        if numScore < -10 {
+        if numHealth < 1 {
             reset()
         } else {
             checkBallons()
             score.text = String(numScore)
+            health.text = String(numHealth)
         }
     }
     

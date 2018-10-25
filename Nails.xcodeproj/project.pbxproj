@@ -7,17 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A7233D92181446300D3C7DB /* battle.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5A7233D72181446300D3C7DB /* battle.wav */; };
+		5A7233DA2181446300D3C7DB /* blop.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5A7233D82181446300D3C7DB /* blop.wav */; };
 		5AE6F94D21692332003250DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE6F94C21692332003250DD /* AppDelegate.swift */; };
 		5AE6F95321692332003250DD /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE6F95221692332003250DD /* GameScene.swift */; };
 		5AE6F95521692332003250DD /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE6F95421692332003250DD /* GameViewController.swift */; };
 		5AE6F95821692332003250DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AE6F95621692332003250DD /* Main.storyboard */; };
 		5AE6F95D21692333003250DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AE6F95B21692333003250DD /* LaunchScreen.storyboard */; };
 		5AE6F966216976ED003250DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AE6F95921692333003250DD /* Assets.xcassets */; };
-		5AE6F968216982D2003250DD /* battle.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5AE6F967216982D2003250DD /* battle.wav */; };
-		5AE6F96A21698651003250DD /* blop.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5AE6F96921698651003250DD /* blop.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A7233D72181446300D3C7DB /* battle.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = battle.wav; sourceTree = "<group>"; };
+		5A7233D82181446300D3C7DB /* blop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = blop.wav; sourceTree = "<group>"; };
 		5AE6F94921692332003250DD /* Nails.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nails.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AE6F94C21692332003250DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5AE6F95221692332003250DD /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -26,8 +28,6 @@
 		5AE6F95921692333003250DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5AE6F95C21692333003250DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5AE6F95E21692333003250DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5AE6F967216982D2003250DD /* battle.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = battle.wav; path = ../../../Downloads/battle.wav; sourceTree = "<group>"; };
-		5AE6F96921698651003250DD /* blop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = blop.wav; path = ../../../Downloads/blop.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +63,8 @@
 				5AE6F94C21692332003250DD /* AppDelegate.swift */,
 				5AE6F95221692332003250DD /* GameScene.swift */,
 				5AE6F95421692332003250DD /* GameViewController.swift */,
-				5AE6F967216982D2003250DD /* battle.wav */,
-				5AE6F96921698651003250DD /* blop.wav */,
+				5A7233D72181446300D3C7DB /* battle.wav */,
+				5A7233D82181446300D3C7DB /* blop.wav */,
 				5AE6F95621692332003250DD /* Main.storyboard */,
 				5AE6F95921692333003250DD /* Assets.xcassets */,
 				5AE6F95B21692333003250DD /* LaunchScreen.storyboard */,
@@ -131,10 +131,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5AE6F96A21698651003250DD /* blop.wav in Resources */,
+				5A7233DA2181446300D3C7DB /* blop.wav in Resources */,
 				5AE6F95821692332003250DD /* Main.storyboard in Resources */,
+				5A7233D92181446300D3C7DB /* battle.wav in Resources */,
 				5AE6F966216976ED003250DD /* Assets.xcassets in Resources */,
-				5AE6F968216982D2003250DD /* battle.wav in Resources */,
 				5AE6F95D21692333003250DD /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

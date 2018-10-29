@@ -191,6 +191,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func reset() {
         numScore = 0
+        numHealth = 10
         numOfBalloons = 0
         for ent in self.children {
             if ent.name == "balloon" || ent.name == "nail" {
